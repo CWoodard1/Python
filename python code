@@ -1,0 +1,26 @@
+# Put your code here:
+"""
+Program Bounciness
+Author Chandler Woodard
+Purpose Write a program that lets the user enter the initial height from which the ball is dropped, the bounciness index, and the number of times the ball is allowed to continue bouncing. Output should be the total distance traveled by the ball.
+"""
+
+#Get the input of the bounce hight and time, while also getting out variables
+h1 = float(input("Enter the height from which the ball is dropped: "))
+b1 = float(input("Enter the bounciness index of the ball: "))
+bb1 = int(input("Enter the number of times the ball is allowed to continue bouncing: "))
+
+#this will get the variable for the distance
+distance = 0
+
+#Now this will work out the distance hieight and the lower bounces of  the ball
+
+while bb1 > 0:
+    distance = distance + h1
+    h1 = h1 * b1 
+    distance = distance + h1
+    bb1 -= 1
+
+    #This will print the results
+print("The distance travelled by the ball is %.3f" % distance)
+    
